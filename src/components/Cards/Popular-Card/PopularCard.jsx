@@ -7,7 +7,7 @@ import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownR
 
 const PopularCard = () => {
   return (
-    <div className=" w-full h-[160px] rounded-[5px] mb-[25px] flex  border-2 border-gray-300">
+    <div className="cursor-pointer hover:shadow-lg hover:border-none w-full h-[150px] rounded-[5px] mb-[25px] flex  border border-gray-300">
       {/*Image Div*/}
       <div className="w-[14%] h-full  flex items-center justify-center ">
         <img

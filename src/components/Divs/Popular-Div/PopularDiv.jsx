@@ -32,6 +32,7 @@ const PopularDiv = () => {
         <PopularCard />
         <PopularCard />
         <PopularCard />
+        <PopularCard />
       </div>
     </div>
   );

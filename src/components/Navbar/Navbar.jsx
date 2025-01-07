@@ -11,12 +11,12 @@ import SearchIcon from "@mui/icons-material/Search";
 
 const Navbar = () => {
   return (
-    <div className="flex pt-[1.7rem] pb-[0.9rem] justify-between   h-[95px] items-center">
+    <div className=" fixed top-0 w-full z-[999] bg-white flex   justify-between   h-[95px] items-center ">
       {/*  left section  */}
       <div className="px-[2rem] w-[17%] flex items-center gap-[2rem]  text-left">
-        <WbSunnyOutlinedIcon className="text-gray-800 scale-[1.2]" />
+        <WbSunnyOutlinedIcon className="text-gray-800 scale-[1.2] cursor-pointer" />
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl5oK-fHsFKvAHYDM9e4_CB6LNZGvKIQ3_7A&s" // Replace with your logo path
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl5oK-fHsFKvAHYDM9e4_CB6LNZGvKIQ3_7A&s"
           alt="Reddit Logo"
           className="h-[35px]"
         />
@@ -24,7 +24,7 @@ const Navbar = () => {
 
       {/*  center section  */}
       <div className="px-[0.2rem] w-[65%]">
-        <div className="w-full h-16 flex items-center justify-between px-6 bg-white ">
+        <div className="w-full h-16 flex items-center justify-between px-6  ">
           {/* left Section */}
           <div className="flex items-center space-x-8 font-semibold  text-[1.25rem]">
             <a
@@ -73,20 +73,20 @@ const Navbar = () => {
 
       {/*  right section  */}
       <div className="px-[2rem] w-[13%] flex items-center justify-around scale-[1.1]">
-        <div className="relative b">
+        <div className="relative cursor-pointer">
           <ChatBubbleOutlineOutlinedIcon className="text-gray-800" />
           <span className="w-[12px] h-[12px] bg-orange-600 rounded-full absolute left-0" />
         </div>
 
-        <MailOutlineOutlinedIcon className="text-gray-800" />
+        <MailOutlineOutlinedIcon className="text-gray-800 cursor-pointer" />
         <div className="flex gap-[6px] items-center">
           <img
-            src="https://www.exscribe.com/wp-content/uploads/2021/08/placeholder-image-person-jpg.jpg"
+            src="https://images.unsplash.com/photo-1735657090869-a81c50626bd3?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="placeholder"
             srcset=""
             className="h-[33px] w-[35px] rounded-full border border-black"
           />
-          <KeyboardArrowDownOutlinedIcon className="text-gray-800" />
+          <KeyboardArrowDownOutlinedIcon className="text-gray-800 cursor-pointer" />
         </div>
       </div>
     </div>
