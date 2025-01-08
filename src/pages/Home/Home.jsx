@@ -10,7 +10,7 @@ const Home = () => {
         <Navbar />
       </div>
       {/*Main Content Div*/}
-      <div className="mt-[100px] h-[100vh] px-[0.8rem] bg-[#FFFFFF] ">
+      <div className="mt-[90px] h-[100vh] px-[0.8rem] bg-[#FFFFFF] ">
         <Maindiv />
       </div>
     </div>

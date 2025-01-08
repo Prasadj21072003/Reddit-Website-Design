@@ -15,7 +15,7 @@ const FavoriteSection = () => {
             <img
               src="https://images.unsplash.com/photo-1721332153521-120cb0cd02d9?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="placeholder"
-              srcset=""
+              srcSet=""
               className="   h-[28px] ml-[12px] mr-[6px] w-[28px] rounded-full    "
             />
             <span className="text-[#354B60] font-semibold text-[1.1rem] ">
@@ -31,7 +31,7 @@ const FavoriteSection = () => {
             <img
               src="https://plus.unsplash.com/premium_photo-1678727388867-25e2e90a08d6?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="placeholder"
-              srcset=""
+              srcSet=""
               className="   h-[28px] ml-[12px] mr-[6px] w-[28px] rounded-full    "
             />
             <span className="text-[#354B60] font-semibold  text-[1.1rem]">
@@ -47,7 +47,7 @@ const FavoriteSection = () => {
             <img
               src="https://images.unsplash.com/photo-1735657090869-a81c50626bd3?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="placeholder"
-              srcset=""
+              srcSet=""
               className="   h-[28px] ml-[12px] mr-[6px] w-[28px] rounded-full    "
             />
             <span className="text-[#354B60] font-semibold  text-[1.1rem]">
@@ -60,7 +60,7 @@ const FavoriteSection = () => {
             <img
               src="https://images.unsplash.com/photo-1700710076724-68fddea71ed1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="placeholder"
-              srcset=""
+              srcSet=""
               className="h-[28px] ml-[12px] mr-[6px] w-[28px] rounded-full    "
             />
             <span className="text-[#354B60] font-semibold  text-[1.1rem]">

@@ -1,17 +1,21 @@
-import React from "react";
+import React, { memo } from "react";
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import MoreHorizOutlinedIcon from "@mui/icons-material/MoreHorizOutlined";
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 
-const PopularCard = () => {
+const PopularCard = memo(({ data }) => {
   return (
     <div className="cursor-pointer hover:shadow-lg hover:border-none w-full h-[150px] rounded-[5px] mb-[25px] flex  border border-gray-300">
       {/*Image Div*/}
       <div className="w-[14%] h-full  flex items-center justify-center ">
         <img
-          src="https://plus.unsplash.com/premium_photo-1719943510748-4b4354fbcf56?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src={
+            data?.thumbnail !== ""
+              ? data?.thumbnail
+              : "https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
+          }
           alt=""
           className="w-[120px] h-[120px] rounded-[5px] object-cover"
         />
@@ -20,9 +24,10 @@ const PopularCard = () => {
       {/*Info Div*/}
       <div className="flex-1 h-full px-[2rem] flex py-[1rem]">
         <div className=" flex-1 flex flex-col justify-between">
-          <h1 className="text-gray-700 font-bold text-[1.4rem] text-left leading-tight">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-            et, quo dicta
+          <h1 className="text-gray-700 font-bold text-[1.3rem] text-left leading-tight">
+            {data?.title.length > 100
+              ? data?.title.slice(0, 100) + "..."
+              : data.title}
           </h1>
 
           <div className="flex justify-between items-center w-full ">
@@ -31,10 +36,10 @@ const PopularCard = () => {
               <img
                 src="https://www.exscribe.com/wp-content/uploads/2021/08/placeholder-image-person-jpg.jpg"
                 alt="placeholder"
-                srcset=""
+                srcSet=""
                 className="h-[23px] mx-[12px] w-[25px] rounded-full border border-black"
               />
-              Gladys Alexander
+              {data?.author}
             </div>
             <span className="text-gray-400">July 15 2012 9:43 PM</span>
           </div>
@@ -42,7 +47,8 @@ const PopularCard = () => {
         <div className="w-[35%]  flex justify-end items-center pr-[2rem]">
           <div className=" h-full flex flex-col justify-between text-left">
             <div className="flex gap-[12px] font-semibold text-gray-600">
-              <ChatBubbleOutlineOutlinedIcon /> 716 <span>Coomments</span>
+              <ChatBubbleOutlineOutlinedIcon /> {data?.num_comments}{" "}
+              <span>Coomments</span>
             </div>
             <div className="flex gap-[12px] font-semibold text-gray-600">
               <ShareOutlinedIcon /> 354 <span>Share</span>
@@ -75,6 +81,6 @@ const PopularCard = () => {
       </div>
     </div>
   );
-};
+});
 
 export default PopularCard;

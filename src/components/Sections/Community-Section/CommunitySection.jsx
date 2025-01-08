@@ -1,6 +1,8 @@
 import React from "react";
+import Store from "../../../store/Store";
 
 const CommunitySection = () => {
+  const { setcommunity } = Store();
   return (
     <div className="py-[30px]">
       {/*Heading*/}
@@ -15,10 +17,15 @@ const CommunitySection = () => {
             <img
               src="https://plus.unsplash.com/premium_photo-1681868376745-0565b18b4c8c?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="placeholder"
-              srcset=""
+              srcSet=""
               className="   h-[28px] ml-[12px] mr-[6px] w-[28px] rounded-full  "
             />
-            <span className="text-[#354B60] font-semibold  text-[1.1rem] ">
+            <span
+              onClick={() => {
+                setcommunity("funymore");
+              }}
+              className="text-[#354B60] font-semibold  text-[1.1rem] cursor-pointer "
+            >
               r/funymore
             </span>
           </div>
@@ -28,10 +35,15 @@ const CommunitySection = () => {
             <img
               src="https://plus.unsplash.com/premium_photo-1673746231217-70a97d4cc160?q=80&w=1854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="placeholder"
-              srcset=""
+              srcSet=""
               className="   h-[28px] ml-[12px] mr-[6px] w-[28px] rounded-full  "
             />
-            <span className="text-[#354B60] font-semibold text-[1.1rem]">
+            <span
+              onClick={() => {
+                setcommunity("breakingnews");
+              }}
+              className="text-[#354B60] font-semibold text-[1.1rem] cursor-pointer"
+            >
               r/breakingnews
             </span>
           </div>
@@ -41,10 +53,15 @@ const CommunitySection = () => {
             <img
               src="https://plus.unsplash.com/premium_photo-1736210519820-00ee6c452a43?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="placeholder"
-              srcset=""
+              srcSet=""
               className="   h-[28px] ml-[12px] mr-[6px] w-[28px] rounded-full  "
             />
-            <span className="text-[#354B60] font-semibold text-[1.1rem]">
+            <span
+              onClick={() => {
+                setcommunity("gaming");
+              }}
+              className="text-[#354B60] font-semibold text-[1.1rem] cursor-pointer"
+            >
               r/gaming
             </span>
           </div>
@@ -57,10 +74,15 @@ const CommunitySection = () => {
             <img
               src="https://plus.unsplash.com/premium_photo-1725446034373-b698ca6966a6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="placeholder"
-              srcset=""
+              srcSet=""
               className="   h-[28px] ml-[12px] mr-[6px] w-[28px] rounded-full  "
             />
-            <span className="text-[#354B60] font-semibold  text-[1.1rem]">
+            <span
+              onClick={() => {
+                setcommunity("lovestory");
+              }}
+              className="text-[#354B60] font-semibold  text-[1.1rem] cursor-pointer"
+            >
               r/lovestory
             </span>
           </div>

@@ -5,7 +5,7 @@ import PopularDiv from "../Popular-Div/PopularDiv";
 
 const Maindiv = () => {
   return (
-    <div className="w-full h-auto  bg-[#F2F7FB] pt-[1.5rem] flex">
+    <div className="w-full h-auto   bg-[#F2F7FB] pt-[1.3rem] flex">
       {/*Left Sidebar*/}
       <div className=" h-full  w-[19%]">
         <LeftSidebar />

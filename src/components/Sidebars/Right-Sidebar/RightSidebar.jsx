@@ -4,7 +4,7 @@ import SaleSection from "../../Sections/Sale-Section/SaleSection";
 
 const RightSidebar = () => {
   return (
-    <div className=" w-full  h-[105vh] flex flex-col justify-between   px-[1rem] pb-[1rem]">
+    <div className=" w-full  h-[115vh]  flex flex-col justify-between   px-[1rem] pb-[1rem]">
       {/* Sale Section */}
       <div className="w-full">
         <SaleSection />
