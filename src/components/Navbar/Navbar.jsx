@@ -13,7 +13,7 @@ import Storage from "../../storage/Storage";
 const Navbar = memo(() => {
   const { navlink, setnavlink, setsearch, search } = Storage();
   return (
-    <nav className="fixed top-0 w-full z-[999] bg-white flex   justify-between pt-[0.5rem] items-center h-[90px]">
+    <nav className="border border-black fixed top-0 w-full z-[999] bg-white flex   justify-between pt-[0.5rem] items-center h-[90px]">
       {/*  left section  */}
       <div className="px-[2rem] w-[17%] flex items-center gap-[2rem]  text-left">
         <WbSunnyOutlinedIcon className="text-gray-800 scale-[1.2] cursor-pointer" />

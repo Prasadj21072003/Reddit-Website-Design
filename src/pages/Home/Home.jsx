@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import Navbar from "../../components/Navbar/Navbar";
-import MainContainer from "../../components/Containers/Main-Container/Maincontainer";
+import MainContainer from "../../components/Containers/Main-Container/MainContainer";
 
 const Home = memo(() => {
   return (
