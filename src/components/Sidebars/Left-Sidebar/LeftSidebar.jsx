@@ -1,11 +1,12 @@
-import React from "react";
+import React, { memo } from "react";
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
 import FavoriteSection from "../../Sections/Favorites-Section/FavoriteSection";
 import RedditfeedsSection from "../../Sections/RedditFeeds-Section/RedditfeedsSection";
 import CommunitySection from "../../Sections/Community-Section/CommunitySection";
-import Store from "../../../store/Store";
-const LeftSidebar = () => {
-  const { dropdown, setdropdown } = Store();
+import Storage from "../../../storage/Storage";
+
+const LeftSidebar = memo(() => {
+  const { dropdown, setdropdown } = Storage();
   return (
     <div className=" h-auto pl-[1.5rem] pr-[2.5rem] pb-[3rem] ">
       <div className="h-full ">
@@ -45,6 +46,6 @@ const LeftSidebar = () => {
       </div>
     </div>
   );
-};
+});
 
 export default LeftSidebar;

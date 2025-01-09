@@ -1,9 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import FiberManualRecordRoundedIcon from "@mui/icons-material/FiberManualRecordRounded";
 import CopyrightRoundedIcon from "@mui/icons-material/CopyrightRounded";
-const Footer = () => {
+const Footer = memo(() => {
   return (
-    <div className="w-full h-[200px]  ">
+    <footer className=" w-full h-[200px]  ">
       {/* Links */}
       <div className="w-full h-[75%] text-[0.9rem] border-t border-b border-gray-300 flex justify-between text-gray-500 font-semibold">
         <div className="w-auto h-full  text-left  flex flex-col justify-evenly">
@@ -51,8 +51,8 @@ const Footer = () => {
           <span>Terms</span>
         </div>
       </div>
-    </div>
+    </footer>
   );
-};
+});
 
 export default Footer;

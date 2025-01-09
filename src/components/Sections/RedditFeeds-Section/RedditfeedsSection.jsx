@@ -1,6 +1,6 @@
-import React from "react";
+import React, { memo } from "react";
 
-const RedditfeedsSection = () => {
+const RedditfeedsSection = memo(() => {
   return (
     <div className="py-[30px] border-t border-b border-gray-300">
       {/*Heading*/}
@@ -71,6 +71,6 @@ const RedditfeedsSection = () => {
       </div>
     </div>
   );
-};
+});
 
 export default RedditfeedsSection;

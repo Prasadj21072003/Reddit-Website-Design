@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import Navbar from "../../components/Navbar/Navbar";
-import Maindiv from "../../components/Divs/Maindiv/Maindiv";
+import MainContainer from "../../components/Containers/Main-Container/Maincontainer";
 
-const Home = () => {
+const Home = memo(() => {
   return (
     <div className="h-full w-full overflow-x-hidden bg-[#FFFFFF]">
       {/*NavBar*/}
@@ -10,11 +10,11 @@ const Home = () => {
         <Navbar />
       </div>
       {/*Main Content Div*/}
-      <div className="mt-[90px] h-[100vh] px-[0.8rem] bg-[#FFFFFF] ">
-        <Maindiv />
-      </div>
+      <main className=" mt-[90px] h-[100vh] px-[0.8rem] bg-[#FFFFFF] ">
+        <MainContainer />
+      </main>
     </div>
   );
-};
+});
 
 export default Home;

@@ -1,8 +1,8 @@
-import React from "react";
-import Store from "../../../store/Store";
+import React, { memo } from "react";
+import Storage from "../../../storage/Storage";
 
-const CommunitySection = () => {
-  const { setcommunity } = Store();
+const CommunitySection = memo(() => {
+  const { setcommunity, community, setsearch } = Storage();
   return (
     <div className="py-[30px]">
       {/*Heading*/}
@@ -23,8 +23,11 @@ const CommunitySection = () => {
             <span
               onClick={() => {
                 setcommunity("funymore");
+                setsearch("");
               }}
-              className="text-[#354B60] font-semibold  text-[1.1rem] cursor-pointer "
+              className={` font-semibold  text-[1.1rem] cursor-pointer ${
+                community === `funymore` ? `text-orange-600` : `text-[#354B60]`
+              }`}
             >
               r/funymore
             </span>
@@ -41,8 +44,13 @@ const CommunitySection = () => {
             <span
               onClick={() => {
                 setcommunity("breakingnews");
+                setsearch("");
               }}
-              className="text-[#354B60] font-semibold text-[1.1rem] cursor-pointer"
+              className={` font-semibold  text-[1.1rem] cursor-pointer ${
+                community === `breakingnews`
+                  ? `text-orange-600`
+                  : `text-[#354B60]`
+              }`}
             >
               r/breakingnews
             </span>
@@ -59,8 +67,11 @@ const CommunitySection = () => {
             <span
               onClick={() => {
                 setcommunity("gaming");
+                setsearch("");
               }}
-              className="text-[#354B60] font-semibold text-[1.1rem] cursor-pointer"
+              className={` font-semibold  text-[1.1rem] cursor-pointer ${
+                community === `gaming` ? `text-orange-600` : `text-[#354B60]`
+              }`}
             >
               r/gaming
             </span>
@@ -80,8 +91,11 @@ const CommunitySection = () => {
             <span
               onClick={() => {
                 setcommunity("lovestory");
+                setsearch("");
               }}
-              className="text-[#354B60] font-semibold  text-[1.1rem] cursor-pointer"
+              className={` font-semibold  text-[1.1rem] cursor-pointer ${
+                community === `lovestory` ? `text-orange-600` : `text-[#354B60]`
+              }`}
             >
               r/lovestory
             </span>
@@ -93,6 +107,6 @@ const CommunitySection = () => {
       </div>
     </div>
   );
-};
+});
 
 export default CommunitySection;

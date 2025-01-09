@@ -1,9 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import LeftSidebar from "../../Sidebars/Left-Sidebar/LeftSidebar";
 import RightSidebar from "../../Sidebars/Right-Sidebar/RightSidebar";
-import PopularDiv from "../Popular-Div/PopularDiv";
+import PopularContainer from "../Popular-Container/PopularContainer";
 
-const Maindiv = () => {
+const MainContainer = memo(() => {
   return (
     <div className="w-full h-auto   bg-[#F2F7FB] pt-[1.3rem] flex">
       {/*Left Sidebar*/}
@@ -12,7 +12,7 @@ const Maindiv = () => {
       </div>
       {/*Center Div*/}
       <div className=" h-full flex-1 rounded-[15px] bg-[#FFFFFF] ">
-        <PopularDiv />
+        <PopularContainer />
       </div>
       {/*Right Sidebar*/}
       <div className=" h-full w-[16.5%] ">
@@ -20,6 +20,6 @@ const Maindiv = () => {
       </div>
     </div>
   );
-};
+});
 
-export default Maindiv;
+export default MainContainer;

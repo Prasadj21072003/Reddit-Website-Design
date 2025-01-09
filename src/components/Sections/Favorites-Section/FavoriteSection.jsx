@@ -1,6 +1,6 @@
-import React from "react";
+import React, { memo } from "react";
 
-const FavoriteSection = () => {
+const FavoriteSection = memo(() => {
   return (
     <div className="py-[30px]">
       {/*Heading*/}
@@ -74,6 +74,6 @@ const FavoriteSection = () => {
       </div>
     </div>
   );
-};
+});
 
 export default FavoriteSection;

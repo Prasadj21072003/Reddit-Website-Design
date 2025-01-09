@@ -9,10 +9,10 @@ const PopularCard = memo(({ data }) => {
   return (
     <div className="cursor-pointer hover:shadow-lg hover:border-none w-full h-[150px] rounded-[5px] mb-[25px] flex  border border-gray-300">
       {/*Image Div*/}
-      <div className="w-[14%] h-full  flex items-center justify-center ">
+      <div className=" w-[13%] h-full  flex items-center justify-center ">
         <img
           src={
-            data?.thumbnail !== ""
+            data?.thumbnail.slice(-3) === "jpg"
               ? data?.thumbnail
               : "https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
           }
@@ -25,23 +25,23 @@ const PopularCard = memo(({ data }) => {
       <div className="flex-1 h-full px-[2rem] flex py-[1rem]">
         <div className=" flex-1 flex flex-col justify-between">
           <h1 className="text-gray-700 font-bold text-[1.3rem] text-left leading-tight">
-            {data?.title.length > 100
-              ? data?.title.slice(0, 100) + "..."
+            {data?.title.length > 90
+              ? data?.title.slice(0, 90) + "..."
               : data.title}
           </h1>
 
-          <div className="flex justify-between items-center w-full ">
+          <div className="flex justify-between items-center w-full text-gray-600">
             <div className="flex ">
               Posted by
               <img
-                src="https://www.exscribe.com/wp-content/uploads/2021/08/placeholder-image-person-jpg.jpg"
+                src="https://images.unsplash.com/photo-1735835590796-7032476e7d48?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="placeholder"
                 srcSet=""
-                className="h-[23px] mx-[12px] w-[25px] rounded-full border border-black"
+                className="h-[23px] mx-[12px] w-[23px] rounded-full "
               />
               {data?.author}
             </div>
-            <span className="text-gray-400">July 15 2012 9:43 PM</span>
+            <span className="text-gray-400">July 15,2012 9:43 PM</span>
           </div>
         </div>
         <div className="w-[35%]  flex justify-end items-center pr-[2rem]">
@@ -51,7 +51,7 @@ const PopularCard = memo(({ data }) => {
               <span>Coomments</span>
             </div>
             <div className="flex gap-[12px] font-semibold text-gray-600">
-              <ShareOutlinedIcon /> 354 <span>Share</span>
+              <ShareOutlinedIcon /> {data?.num_crossposts} <span>Share</span>
             </div>
             <div className="flex gap-[12px] font-semibold text-gray-600">
               <MoreHorizOutlinedIcon />

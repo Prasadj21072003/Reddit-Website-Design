@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import MailOutlineOutlinedIcon from "@mui/icons-material/MailOutlineOutlined";
@@ -8,12 +8,12 @@ import DoorbellOutlinedIcon from "@mui/icons-material/DoorbellOutlined";
 import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import SearchIcon from "@mui/icons-material/Search";
-import Store from "../../store/Store";
+import Storage from "../../storage/Storage";
 
-const Navbar = () => {
-  const { navlink, setnavlink, setsearch } = Store();
+const Navbar = memo(() => {
+  const { navlink, setnavlink, setsearch, search } = Storage();
   return (
-    <div className=" fixed top-0 w-full z-[999] bg-white flex   justify-between pt-[0.5rem] items-center h-[90px]">
+    <nav className="fixed top-0 w-full z-[999] bg-white flex   justify-between pt-[0.5rem] items-center h-[90px]">
       {/*  left section  */}
       <div className="px-[2rem] w-[17%] flex items-center gap-[2rem]  text-left">
         <WbSunnyOutlinedIcon className="text-gray-800 scale-[1.2] cursor-pointer" />
@@ -78,6 +78,7 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Find community or post"
+              value={search}
               onChange={(e) => {
                 setsearch(e.target.value);
               }}
@@ -115,8 +116,8 @@ const Navbar = () => {
           <KeyboardArrowDownOutlinedIcon className="text-gray-800 cursor-pointer" />
         </div>
       </div>
-    </div>
+    </nav>
   );
-};
+});
 
 export default Navbar;

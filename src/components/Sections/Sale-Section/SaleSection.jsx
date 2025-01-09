@@ -1,6 +1,6 @@
-import React from "react";
+import React, { memo } from "react";
 
-const SaleSection = () => {
+const SaleSection = memo(() => {
   return (
     <div className="w-full h-full  px-[0.5rem]">
       {/* Sale Poster*/}
@@ -29,6 +29,6 @@ const SaleSection = () => {
       </div>
     </div>
   );
-};
+});
 
 export default SaleSection;

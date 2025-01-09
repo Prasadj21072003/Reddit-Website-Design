@@ -1,20 +1,18 @@
 import { create } from "zustand";
 
-const Store = create((set) => ({
+const Storage = create((set) => ({
   data: [],
   setdata: (data) => set({ data: data }),
   populartopic: "hot",
   setpopulartopic: (data) => set({ populartopic: data }),
-  community: "technology",
+  community: "",
   setcommunity: (data) => set({ community: data }),
   navlink: "popular",
   setnavlink: (data) => set({ navlink: data }),
   search: "",
   setsearch: (data) => set({ search: data }),
-  before: "",
-  setbefore: (data) => set({ before: data }),
-  after: "",
-  setafter: (data) => set({ after: data }),
+  fetchnextdata: "",
+  setfetchnextdata: (data) => set({ fetchnextdata: data }),
   currentpage: 1,
   setcurrentpage: (data) => set({ currentpage: data }),
   nextpage: false,
@@ -23,6 +21,8 @@ const Store = create((set) => ({
   setpreviouspage: (data) => set({ previouspage: data }),
   dropdown: false,
   setdropdown: (data) => set({ dropdown: data }),
+  loader: false,
+  setloader: (data) => set({ loader: data }),
 }));
 
-export default Store;
+export default Storage;
