@@ -5,8 +5,8 @@ const LoaderComponent = memo(() => {
     <div>
       <Oval
         visible={true}
-        height="150"
-        width="150"
+        height="100"
+        width="100"
         color="#FF4500"
         ariaLabel="oval-loading"
         wrapperStyle={{}}

@@ -10,7 +10,7 @@ const Home = memo(() => {
         <Navbar />
       </div>
       {/*Main Content Div*/}
-      <main className=" mt-[90px] h-[100vh] px-[0.8rem] bg-[#FFFFFF] ">
+      <main className=" mt-[70px] h-[100vh] px-[0.8rem] bg-[#FFFFFF] ">
         <MainContainer />
       </main>
     </div>

@@ -7,9 +7,9 @@ import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownR
 
 const PopularCard = memo(({ data }) => {
   return (
-    <div className="cursor-pointer hover:shadow-lg hover:border-none w-full h-[150px] rounded-[5px] mb-[25px] flex  border border-gray-300">
+    <div className="cursor-pointer hover:shadow-lg hover:border-none w-full h-[115px] rounded-[5px] mb-[17px] flex  border border-gray-300">
       {/*Image Div*/}
-      <div className=" w-[13%] h-full  flex items-center justify-center ">
+      <div className=" w-[14%] h-full   flex items-center justify-center ">
         <img
           src={
             data?.thumbnail.slice(-3) === "jpg"
@@ -17,29 +17,29 @@ const PopularCard = memo(({ data }) => {
               : "https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
           }
           alt=""
-          className="w-[120px] h-[120px] rounded-[5px] object-cover"
+          className="w-[90px] h-[90px] rounded-[5px] object-cover"
         />
       </div>
 
       {/*Info Div*/}
-      <div className="flex-1 h-full px-[2rem] flex py-[1rem]">
+      <div className="flex-1 h-full px-[1.2rem] flex py-[1rem]">
         <div className=" flex-1 flex flex-col justify-between">
           <h1 className="text-gray-700 font-bold text-[1.3rem] text-left leading-tight">
-            {data?.title.length > 90
-              ? data?.title.slice(0, 90) + "..."
+            {data?.title.length > 85
+              ? data?.title.slice(0, 85) + "..."
               : data.title}
           </h1>
 
-          <div className="flex justify-between items-center w-full text-gray-600">
-            <div className="flex ">
-              Posted by
+          <div className="flex justify-between items-end w-full text-gray-600 ">
+            <div className="flex items-end">
+              <span>Posted by</span>
               <img
                 src="https://images.unsplash.com/photo-1735835590796-7032476e7d48?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="placeholder"
                 srcSet=""
-                className="h-[23px] mx-[12px] w-[23px] rounded-full "
+                className="h-[18px] mx-[8px] w-[18px] rounded-full "
               />
-              {data?.author}
+              <span>{data?.author}</span>
             </div>
             <span className="text-gray-400">July 15,2012 9:43 PM</span>
           </div>
@@ -62,9 +62,9 @@ const PopularCard = memo(({ data }) => {
       </div>
 
       {/*Last Div*/}
-      <div className="w-[10%] h-full border border-gray-300">
+      <div className="w-[9%] h-full border border-gray-300 py-[7px]">
         <div className="h-[33%] flex justify-center items-center">
-          <span className="bg-[#FFF4F0] px-[20px] py-[2px] cursor-pointer">
+          <span className="bg-[#FFF4F0] px-[15px] py-[2px] cursor-pointer">
             <ExpandLessIcon className="scale-[1.8] text-[#FF3A1E]" />
           </span>
         </div>
@@ -74,7 +74,7 @@ const PopularCard = memo(({ data }) => {
           </span>
         </div>
         <div className="h-[33%]  flex justify-center items-center">
-          <span className="bg-[#FFF4F0] px-[20px] py-[2px] cursor-pointer">
+          <span className="bg-[#FFF4F0] px-[15px] py-[2px] cursor-pointer">
             <KeyboardArrowDownRoundedIcon className="scale-[1.8]  text-[#FF3A1E]" />
           </span>
         </div>

@@ -11,7 +11,7 @@ const MainContainer = memo(() => {
         <LeftSidebar />
       </div>
       {/*Center Div*/}
-      <div className=" h-full flex-1 rounded-[15px] bg-[#FFFFFF] ">
+      <div className=" h-full flex-1 rounded-t-[15px] bg-[#FFFFFF] ">
         <PopularContainer />
       </div>
       {/*Right Sidebar*/}

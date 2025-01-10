@@ -13,14 +13,14 @@ import Storage from "../../storage/Storage";
 const Navbar = memo(() => {
   const { navlink, setnavlink, setsearch, search } = Storage();
   return (
-    <nav className="border border-black fixed top-0 w-full z-[999] bg-white flex   justify-between pt-[0.5rem] items-center h-[90px]">
+    <nav className=" fixed top-0 w-full z-[999] bg-white flex   justify-between pt-[0.5rem] items-center h-[70px]">
       {/*  left section  */}
       <div className="px-[2rem] w-[17%] flex items-center gap-[2rem]  text-left">
         <WbSunnyOutlinedIcon className="text-gray-800 scale-[1.2] cursor-pointer" />
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl5oK-fHsFKvAHYDM9e4_CB6LNZGvKIQ3_7A&s"
           alt="Reddit Logo"
-          className="h-[35px]"
+          className="h-[28px]"
         />
       </div>
 
@@ -74,7 +74,8 @@ const Navbar = memo(() => {
           </div>
 
           {/* Center Section */}
-          <div className="flex-1 mx-[60px] h-[55px] relative flex items-center">
+
+          <div className=" flex-1 mx-[38px] h-[42px] relative flex items-center ">
             <input
               type="text"
               placeholder="Find community or post"
@@ -82,9 +83,9 @@ const Navbar = memo(() => {
               onChange={(e) => {
                 setsearch(e.target.value);
               }}
-              className="w-full placeholder-gray-400 text-[1.1rem] font-semibold pl-[70px] h-full bg-[#F5F6F8]  border border-gray-300 rounded-[10px] focus:outline-none focus:ring-2 focus:ring-orange-500 "
+              className="w-full placeholder-gray-400 text-[1.1rem] font-semibold pl-[48px] h-full bg-[#F5F6F8]  border border-gray-300 rounded-[5px] focus:outline-none focus:ring-2 focus:ring-orange-500 "
             />
-            <div className=" mx-[25px]  absolute scale-[1.4] text-gray-400">
+            <div className=" mx-[17px]  absolute scale-[1.4] text-gray-400">
               <SearchIcon />
             </div>
           </div>
@@ -99,7 +100,7 @@ const Navbar = memo(() => {
       </div>
 
       {/*  right section  */}
-      <div className="px-[2rem] w-[13%] flex items-center justify-around scale-[1.1]">
+      <div className=" px-[1.5rem] w-[13%] flex items-center justify-around scale-[1.1]">
         <div className="relative cursor-pointer">
           <ChatBubbleOutlineOutlinedIcon className="text-gray-800" />
           <span className="w-[12px] h-[12px] bg-orange-600 rounded-full absolute left-0" />
@@ -111,7 +112,7 @@ const Navbar = memo(() => {
             src="https://images.unsplash.com/photo-1735657090869-a81c50626bd3?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="placeholder"
             srcSet=""
-            className="h-[33px] w-[35px] rounded-full border border-black"
+            className="h-[25px] w-[25px] rounded-full border border-black"
           />
           <KeyboardArrowDownOutlinedIcon className="text-gray-800 cursor-pointer" />
         </div>
