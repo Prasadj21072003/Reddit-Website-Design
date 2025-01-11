@@ -9,7 +9,7 @@ const PopularCard = memo(({ data }) => {
   return (
     <div className="cursor-pointer hover:shadow-lg hover:border-none w-full h-[115px] rounded-[5px] mb-[17px] flex  border border-gray-300">
       {/*Image Div*/}
-      <div className=" w-[14%] h-full   flex items-center justify-center ">
+      <div className=" w-[13%] h-full   flex items-center justify-center ">
         <img
           src={
             data?.thumbnail.slice(-3) === "jpg"
